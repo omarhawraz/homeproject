@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Home - ComSend</title>
+    <link rel="stylesheet" href="css/w3.css">
+    <style>
+        body {
+            background-color: #fdcc04; /* Bright yellow */
+            color: black;
+            font-family: 'Arial', sans-serif;
+            padding: 20px;
+        }
+        .slider {
+            max-width: 60%;
+            position: relative;
+            margin: auto;
+            margin-top: 20px;
+        }
+        .slides {
+            display: none;
+        }
+        .menu {
+            margin-bottom: 20px;
+        }
+        .w3-button {
+            background-color: black;
+            color: white;
+            border-radius: 20px; /* More rounded corners */
+            margin: 5px; /* Add space between buttons */
+            padding: 10px 20px; /* Make buttons larger */
+        }
+        .menu .w3-bar-item {
+            border-radius: 20px;
+            margin: 5px;
+        }
+        h1, p, h2 {
+            text-align: center;
+        }
+        .quote {
+            font-style: italic;
+            font-size: 1.2em;
+        }
+        .testimonial, .services {
+            margin: 20px 0;
+            padding: 20px;
+            border: 1px solid black;
+            border-radius: 10px;
+            background-color: white;
+            color: black;
+        }
+        .testimonial p, .services p {
+            font-size: 1.1em;
+        }
+        .testimonial h3, .services h3 {
+            font-size: 1.4em;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Navigation Menu -->
+<div class="w3-bar w3-black menu">
+    <a href="index.html" class="w3-bar-item w3-button">Home</a>
+    <a href="about.html" class="w3-bar-item w3-button">About</a>
+    <a href="services.html" class="w3-bar-item w3-button">Services</a>
+    <a href="contact.html" class="w3-bar-item w3-button">Contact Us</a>
+</div>
+
+<h1>Welcome to ComSend</h1>
+<p class="quote">"Connecting you to the world with ease and efficiency."</p>
+
+<!-- Services Section -->
+<div class="services">
+    <h2>Our Key Services</h2>
+    <p>We offer a variety of services to cater to your communication needs:</p>
+    <ul>
+        <li>24/7 Customer Support</li>
+        <li>Global Connectivity Solutions</li>
+        <li>Custom Communication Packages</li>
+        <li>Reliable and Fast Service</li>
+    </ul>
+</div>
+
+<!-- Testimonials Section -->
+<div class="testimonial">
+    <h3>What Our Clients Say</h3>
+    <p>"ComSend has revolutionized our business communications. Their service is top-notch!" - Jane Doe, CEO of ABC Corp</p>
+    <p>"Reliable and efficient, ComSend is our go-to for all our communication needs." - John Smith, IT Manager at XYZ Ltd</p>
+</div>
+
+<!-- Slider -->
+<div class="w3-content w3-display-container slider">
+    <img class="slides" src="slider1.jpg" style="width:100%">
+    <img class="slides" src="slider2.jpg" style="width:100%">
+    <img class="slides" src="slider3.jpg" style="width:100%">
+    <img class="slides" src="slider4.jpg" style="width:100%">
+
+    <button class="w3-button w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+    <button class="w3-button w3-display-right" onclick="plusDivs(1)">&#10095;</button>
+</div>
+
+<script>
+    var slideIndex = 1;
+    showDivs(slideIndex);
+
+    function plusDivs(n) {
+        showDivs(slideIndex += n);
+    }
+
+    function showDivs(n) {
+        var i;
+        var x = document.getElementsByClassName("slides");
+        if (n > x.length) {slideIndex = 1}
+        if (n < 1) {slideIndex = x.length}
+        for (i = 0; i < x.length; i++) {
+            x[i].style.display = "none";  
+        }
+        x[slideIndex-1].style.display = "block";  
+    }
+</script>
+
+</body>
+</html>
